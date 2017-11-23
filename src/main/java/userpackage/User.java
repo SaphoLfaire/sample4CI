@@ -25,12 +25,12 @@ public class User {
 	}
 	
 	public long getId() {
-		return this.id;
+		return User.id;
 	}
 
 	@Override
 	public String toString() {
-		if (this.id == null) {
+		if (User.id == null) {
 			return "";
 		}
 		return "id=" + id + ", lastName=" + lastName + ", firstName=" + firstName;
@@ -55,7 +55,7 @@ public class User {
 
 		User user = (User) o;
 
-		return this.id.equals(user.getId());
+		return User.id.equals(user.getId());
 
 	}
 }
