@@ -1,4 +1,4 @@
-package UserPackage;
+package userpackage;
 
 public class User {
 
@@ -23,10 +23,14 @@ public class User {
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
+	
+	public long getId() {
+		return this.id;
+	}
 
 	@Override
 	public String toString() {
-		if (id == null) {
+		if (this.id == null) {
 			return "";
 		}
 		return "id=" + id + ", lastName=" + lastName + ", firstName=" + firstName;
@@ -51,7 +55,7 @@ public class User {
 
 		User user = (User) o;
 
-		return id.equals(user.id);
+		return this.id.equals(user.getId());
 
 	}
 }
